@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NexBL</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cosmetics.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Draggable titlebar -->
+    <div class="titlebar">
+      <div class="titlebar-title">NexBL | Created by ajaxfnc</div>
+      <div class="titlebar-controls">
+        <button id="minimize-btn" class="titlebar-button"><i class="fa fa-window-minimize"></i></button>
+        <button id="close-btn" class="titlebar-button"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+
+    <!-- App content area (not draggable) -->
+    <div class="content-area">
+      <div id="root"></div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

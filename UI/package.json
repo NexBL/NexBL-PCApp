@@ -1,0 +1,36 @@
+{
+  "name": "nexbl",
+  "version": "1.0.0",
+  "description": "NexBL - Free bot lobbies for Fortnite Chapter 6",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "package": "electron-builder --win",
+    "clean": "rimraf node_modules"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-react": "^7.23.3",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.6.4",
+    "rimraf": "^5.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "build": {
+    "appId": "com.nexbl.app",
+    "productName": "NexBL",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}

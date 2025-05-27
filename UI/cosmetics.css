@@ -1,0 +1,440 @@
+/* Cosmetics Tab - Professional Design */
+.cosmetics-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  grid-gap: 20px;
+  padding: 20px;
+  color: #e5f1ff;
+}
+
+.cosmetics-header {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.cosmetics-header h2 {
+  color: #00c8ff;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.cosmetics-header p {
+  color: rgba(229, 241, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* Tabs for different cosmetic types */
+.cosmetic-types {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 0;
+}
+
+.cosmetic-type {
+  background-color: rgba(0, 30, 60, 0.4);
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  min-width: 120px;
+  justify-content: center;
+  color: rgba(229, 241, 255, 0.8);
+  border-radius: 4px;
+  border: 1px solid rgba(0, 100, 200, 0.2);
+}
+
+.cosmetic-type:hover {
+  background-color: rgba(0, 40, 80, 0.5);
+  border-color: rgba(0, 200, 255, 0.4);
+}
+
+.cosmetic-type.active {
+  background-color: rgba(0, 80, 150, 0.5);
+  color: #ffffff;
+  border: 1px solid rgba(0, 200, 255, 0.6);
+  box-shadow: 0 0 10px rgba(0, 150, 255, 0.3);
+}
+
+.cosmetic-type i {
+  color: #00c8ff;
+  font-size: 0.9rem;
+}
+
+/* Content and search area */
+.cosmetic-content-area {
+  background: rgba(0, 20, 40, 0.3);
+  border-radius: 6px;
+  border: 1px solid rgba(0, 100, 200, 0.2);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Search box */
+.cosmetic-search {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.cosmetic-search-input {
+  flex: 1;
+  background-color: rgba(0, 30, 50, 0.4);
+  border: 1px solid rgba(0, 100, 200, 0.3);
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.cosmetic-search-input::placeholder {
+  color: rgba(229, 241, 255, 0.5);
+}
+
+.cosmetic-search-input:focus {
+  border-color: #00c8ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 200, 255, 0.3);
+}
+
+.cosmetic-search-button {
+  background-color: #00c8ff;
+  border: none;
+  border-radius: 4px;
+  color: #001428;
+  font-weight: 500;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.cosmetic-search-button i {
+  margin-right: 6px;
+}
+
+.cosmetic-search-button:hover {
+  background-color: #33d6ff;
+}
+
+.cosmetic-search-button:active {
+  background-color: #00a0ff;
+}
+
+/* Results area */
+/* Cosmetic content styles */
+.cosmetic-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+  flex: 1;
+  height: 400px;
+  min-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 160, 255, 0.5) rgba(0, 20, 40, 0.3);
+}
+
+.cosmetic-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cosmetic-content::-webkit-scrollbar-track {
+  background: rgba(0, 20, 40, 0.3);
+  border-radius: 3px;
+}
+
+.cosmetic-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 160, 255, 0.5);
+  border-radius: 3px;
+}
+
+.search-result-count {
+  grid-column: 1 / -1;
+  color: #00c8ff;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: rgba(0, 40, 80, 0.3);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.cosmetic-item {
+  background-color: rgba(0, 30, 60, 0.5);
+  border-radius: 6px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 15px;
+  position: relative;
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0, 100, 200, 0.15);
+  cursor: pointer;
+}
+
+.cosmetic-item:hover {
+  background-color: rgba(0, 40, 70, 0.6);
+  border-color: rgba(0, 160, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cosmetic-item.current-selection {
+  background-color: rgba(0, 50, 100, 0.6);
+  border: 1px solid #00c8ff;
+  box-shadow: 0 0 10px rgba(0, 200, 255, 0.3);
+}
+
+.cosmetic-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 20, 40, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 100, 200, 0.2);
+}
+
+.cosmetic-icon img {
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
+}
+
+.cosmetic-details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.cosmetic-details h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+}
+
+.cosmetic-item:hover .cosmetic-details h3 {
+  color: #00e8ff;
+  text-shadow: 0 0 5px rgba(0, 200, 255, 0.5);
+}
+
+.cosmetic-details p {
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  color: rgba(229, 241, 255, 0.7);
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.cosmetic-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.cosmetic-rarity {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 8px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cosmetic-rarity::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.cosmetic-rarity.common {
+  color: #c2c2c2;
+  border: 1px solid rgba(194, 194, 194, 0.3);
+}
+.cosmetic-rarity.common::before {
+  background-color: #c2c2c2;
+  box-shadow: 0 0 8px rgba(194, 194, 194, 0.8);
+}
+
+.cosmetic-rarity.uncommon {
+  color: #7bea4c;
+  border: 1px solid rgba(123, 234, 76, 0.3);
+}
+
+.select-cosmetic i {
+  font-size: 0.9rem;
+}
+
+.select-cosmetic:hover {
+  background-color: #00c8ff;
+}
+
+.select-cosmetic:active {
+  background-color: #0080dd;
+}
+
+.select-cosmetic.selected {
+  background-color: #00a050;
+  pointer-events: none;
+}
+
+.cosmetic-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.cosmetic-id {
+  color: rgba(229, 241, 255, 0.5);
+  font-size: 0.75rem;
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 200, 255, 0.1);
+}
+
+.cosmetic-loading {
+  text-align: center;
+  padding: 30px;
+  font-size: 1rem;
+  color: #00c8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.cosmetic-loading i {
+  font-size: 2rem;
+}
+
+.cosmetic-no-results, 
+.cosmetic-error {
+  text-align: center;
+  padding: 30px;
+  background-color: rgba(0, 30, 60, 0.3);
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+.cosmetic-error {
+  color: #ff5555;
+  border: 1px solid rgba(255, 50, 50, 0.3);
+}
+
+/* Selected cosmetics display with modern glass card design */
+.selected-cosmetics {
+  background: rgba(0, 20, 40, 0.3);
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid rgba(0, 100, 200, 0.2);
+  margin-bottom: 20px;
+}
+
+.selected-cosmetics h3 {
+  color: #00c8ff;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.selected-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.selected-cosmetic {
+  background-color: rgba(0, 30, 60, 0.5);
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 100, 200, 0.2);
+}
+
+.selected-cosmetic-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.selected-cosmetic-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.selected-cosmetic-type {
+  background-color: #0080dd;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 3px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 500;
+}
+
+.selected-cosmetic-name {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Error message */
+.error-container {
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.error-icon {
+  font-size: 3rem;
+  color: #ff5555;
+}
+
+.error-container h2 {
+  color: #ff5555;
+}

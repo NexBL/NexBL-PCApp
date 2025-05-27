@@ -1,0 +1,51 @@
+{
+  "cosmetics": {
+    "character": {
+      "id": "CID_029_Athena_Commando_F_Halloween",
+      "styles": [
+        {
+          "channel": "Material",
+          "variant": "Mat3"
+        }
+      ]
+    },
+    "backpack": {
+      "id": "BID_138_Celestial",
+      "styles": []
+    },
+    "eid": "EID_TimesTicking",
+    "lvl": "72294",
+    "banner": {
+      "id": "OtherBanner68",
+      "color": "DefaultColor22"
+    }
+  },
+  "general": {
+    "add_friends": true,
+    "join_friends": true,
+    "leave_on_match_start": true,
+    "should_track_matches": true,
+    "disable_playlist_restriction": true,
+    "start_accounts": "1",
+    "starting_status": "NexBL | client starting, please wait 💦",
+    "whitelist": {
+      "enabled": false,
+      "only_allow_whitelisted_joins": true,
+      "users": [
+        "AjaxFNC-_- on YT"
+      ]
+    },
+    "leave_time": {
+      "leave_type": "hours",
+      "time": 60
+    },
+    "in_use": {
+      "status": "NexBL | In Use Wait ❌",
+      "type": "xa"
+    },
+    "usable": {
+      "status": "NexBL | Invite Me ✔️",
+      "type": "online"
+    }
+  }
+}
