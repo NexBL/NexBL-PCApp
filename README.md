@@ -28,8 +28,8 @@ Follow these steps to get everything set up:
 
 1. **Clone or download the repository**
    ```bash
-   git clone https://github.com/your-username/scrapped-nexbl.git
-   cd scrapped-nexbl
+   git clone https://github.com/NexBL/NexBL-PCApp.git
+   cd NexBL-PCApp
    ```
 
 2. **Install Bot Logic dependencies**
@@ -56,7 +56,7 @@ Follow these steps to get everything set up:
 ## 📁 Project Structure
 
 ```plaintext
-scrapped-nexbl/
+NexBL-PCApp/
 ├── BotLogic/       # Core logic and behavior of the bots
 ├── UI/             # Frontend interface for managing and customizing bots
 └── README.md       # You're here!
