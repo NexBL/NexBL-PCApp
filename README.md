@@ -10,6 +10,9 @@ This app allows you to:
 
 Whether you're a developer, modder, or just curious, this tool provides all you need to experiment with and deploy bots on your local machine.
 
+## ⚠️ **Warning:** After the update `35.10`. The way bot lobbies work was changed, and this no longer works!
+
+
 ---
 
 ## 🚀 Getting Started
